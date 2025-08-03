@@ -92,11 +92,10 @@
                         <img src="img/removebg-Photoroom (1).png" class="card-img-top img-fluid" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">RTX 5090
-                                <span class="badge bg-danger">اتمام موجودی</span>   
+                                <span class="badge bg-danger">اتمام موجودی</span>
                             </h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                16GB ram 1TB SSD rtx 5090
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -111,8 +110,7 @@
                                 <span class="badge bg-danger">اتمام موجودی</span>
                             </h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                32GB ram 1TB SSD rtx 5090
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -124,8 +122,8 @@
                         <div class="card-body">
                             <h5 class="card-title">RTX 5090<span class="badge bg-success">موجود</span></h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                24GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -137,8 +135,8 @@
                         <div class="card-body">
                             <h5 class="card-title">RTX 5090<span class="badge bg-success">موجود</span></h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                30GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -151,8 +149,8 @@
                         <div class="card-body">
                             <h5 class="card-title">RTX 5090<span class="badge bg-success">موجود</span></h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                64GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -166,8 +164,8 @@
                                 <span class="badge bg-danger">اتمام موجودی</span>
                             </h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                32GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -181,8 +179,8 @@
                                 <span class="badge bg-danger">اتمام موجودی</span>
                             </h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                16GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -196,8 +194,8 @@
                                 <span class="badge bg-danger">اتمام موجودی</span>
                             </h5>
                             <p class="card-text">
-                                Some quick example text to build on the card title and make up the bulk of the card's
-                                content.
+                                32GB ram 1TB SSD rtx 5090
+
                             </p>
                             <a href="#" class="btn btn-primary">خرید</a>
                         </div>
@@ -210,16 +208,12 @@
     <!-- Modal-section -->
     <div class="modal-section py-5 hidden">
         <div class="container text-center">
-            <h4>مودال یک پراپرتی بسیار خوبی است</h4>
+            <h4>برای اطلاع از قیمت باشماره زیر تماس بگیرید</h4>
             <p class="secondary">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br />
-                Illum eveniet accusamus autem impedit dolore exercitationem ratione cumque quidem,
+                <i class="bi bi-headset load"></i> <br />
                 <br />
-                atque sint facere libero ipsum unde totam esse porro dicta, iste inventore!
-            </p>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my-modal">مشاهده مودال</button>
-            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas1">مشاهده
-                مودال</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#my-modal">پل ارتباطی 1</button>
+
         </div>
     </div>
 
@@ -312,6 +306,15 @@
         });
 
         document.querySelectorAll(".hidden").forEach((el) => observer.observe(el));
+          window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.opacity = '0';
+    loadingScreen.style.transition = 'opacity 0.5s ease';
+
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  });
     </script>
 </body>
 
