@@ -1,0 +1,33 @@
+.intro {
+  background: linear-gradient(to right, #817b7b, #050506);
+}
+
+body {
+  background-color: #aeb2b2;
+}
+
+nav {
+  background-color: #4e5457;
+}
+
+.cards .card {
+  background: linear-gradient(to bottom, #b8b8b8, #408ebe);
+  border-radius: 10px;
+}
+
+.end-1 {
+  background-color: #4e5457;
+  color: #fff;
+  border-radius: 5px 10px 10px 5px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
