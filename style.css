@@ -65,3 +65,14 @@ nav {
     transform: rotate(360deg);
   }
 }
+
+.card{
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  
+
+}
+.card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 2px 50px 1px #5183a4;
+}

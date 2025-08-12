@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>درگاه پرداخت شبیه بانک ملت (فیک)</title>
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.rtl.min.css">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Vazirmatn;
+    }
+    .payment-box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 500px;
+      margin: auto;
+      margin-top: 50px;
+    }
+    .bank-header {
+      background-color: #c1272d;
+      padding: 15px;
+      border-radius: 12px 12px 0 0;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .timer {
+      color: #c1272d;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .btn-pay {
+      background-color: #c1272d;
+      color: #fff;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-pay:hover {
+      background-color: #a71f23;
+    }
+  </style>
+</head>
+<body>
+
+<div class="payment-box">
+  <div class="bank-header">درگاه پرداخت اینترنتی بانک ملت</div>
+  <div class="timer">زمان باقی‌مانده: <span id="countdown">02:00</span></div>
+  
+  <form>
+    <div class="mb-3">
+      <label class="form-label">شماره کارت</label>
+      <input type="text" maxlength="16" class="form-control" placeholder="---- ---- ---- ----">
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="form-label">CVV2</label>
+        <input type="text" maxlength="4" class="form-control" placeholder="***">
+      </div>
+      <div class="col">
+        <label class="form-label">تاریخ انقضا</label>
+        <div class="d-flex">
+          <input type="text" maxlength="2" class="form-control me-1" placeholder="ماه">
+          <input type="text" maxlength="2" class="form-control" placeholder="سال">
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 mt-3">
+      <label class="form-label">رمز دوم (پویا)</label>
+      <input type="password" maxlength="12" class="form-control" placeholder="******">
+    </div>
+    <button type="button" class="btn btn-pay w-100 mt-3" onclick="successPayment()">پرداخت</button>
+    <a href="cart.html" class="btn btn-secondary w-100 mt-2">بازگشت به سبد خرید</a>
+  </form>
+</div>
+
+<script>
+  // تایمر معکوس
+  let time = 120;
+  const countdownEl = document.getElementById('countdown');
+  const timer = setInterval(() => {
+    let minutes = String(Math.floor(time / 60)).padStart(2, '0');
+    let seconds = String(time % 60).padStart(2, '0');
+    countdownEl.textContent = `${minutes}:${seconds}`;
+    time--;
+    if (time < 0) {
+      clearInterval(timer);
+      alert("زمان پرداخت به پایان رسید!");
+      window.location.href = "cart.html";
+    }
+  }, 1000);
+
+  // پرداخت موفق فیک
+  function successPayment() {
+    alert("پرداخت با موفقیت انجام شد ✅ (این صفحه فیک است)");
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
